@@ -24,7 +24,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(216, 124, 124, 0.6);
+  background: #1f171e48;
   /* position: fixed; */
   top: 0;
   z-index: 999;
@@ -121,58 +121,60 @@ nav ul li a:hover {
 
 /* ================= SCHEDULE ================= */
 .schedule {
-  padding: 80px 70px;
-  background: #1a1a1a;
+  padding: 60px 40px;   
+  background: #ffb5a280;
 }
 
 .schedule h2 {
   text-align: center;
-  font-size: 45px;
-  margin-bottom: 40px;
+  font-size: 38px;      
+  margin-bottom: 30px;
 }
 
 .schedule-grid {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;           
 }
 
 .schedule-box {
-  background: #222;
-  padding: 25px;
-  border-radius: 16px;
-  position: relative;
-  overflow: hidden;
-  transition: 0.4s;
+  background: #e8f9ff69;
+  padding: 18px;       
+  border-radius: 14px;
+  transition: 0.35s ease;
 }
 
 .schedule-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  transform: translateY(-6px);   
+  box-shadow: 0 14px 28px rgba(0,0,0,0.4);
 }
 
 .schedule-box img {
   width: 100%;
-  height: 300px;
+  height: 220px;       
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 10px;
 }
-.schedule-box h2{
+
+.schedule-box h2 {
   color: rgb(23, 236, 244);
-  font-size:larger;
+  font-size: 20px;     
+  margin-top: 12px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
 }
 
 .schedule-box h3 {
   color: #ffcc85;
-  margin: 15px 0 10px;
+  font-size: 16px;
+  margin: 8px 0;
 }
+
 
 /* ================= FEATURES ================= */
 .features {
   padding: 80px 70px;
-  background: #f7f8fa;
+  background: #d3b5b58f;
   text-align: center;
 }
 
@@ -203,8 +205,9 @@ nav ul li a:hover {
 }
 
 .feature-box img {
-  width: 60px;
-  margin-bottom: 15px;
+  width: 200px;
+  margin-bottom: 25px;
+  height: 140px;
 }
 
 .feature-box h3 {
@@ -218,7 +221,7 @@ nav ul li a:hover {
 /* ================= PRICE ================= */
 .price-section {
   padding: 80px 70px;
-  background: #1a1a1a;
+  background: #ffb5a280;
   text-align: center;
 }
 
@@ -310,7 +313,7 @@ font-size: 40px;
 /* ================= SINGER GALLERY ================= */
 .singer-gallery {
   padding: 90px clamp(20px, 6vw, 70px);
-  background: #111;
+  background: #ffb5a280;
 }
 
 .gallery-title {
@@ -414,7 +417,7 @@ font-size: 40px;
   padding: 80px 70px;
   display: flex;
   gap: 40px;
-  background: #1a1a1a;
+  background: #d3b5b58f;
 }
 
 .about img {
@@ -425,6 +428,7 @@ font-size: 40px;
 /* ================= CONTACT ================= */
 .contact {
   padding: 80px 70px;
+  background-color:#f1e1dd42 ;
 }
 
 form {
@@ -462,7 +466,7 @@ form button:hover{
 /* ================= FOOTER ================= */
 footer {
   padding: 20px;
-  background: #000;
+  background: #412f2bb7;
   text-align: center;
   color: #aaa;
 }
@@ -557,4 +561,89 @@ footer {
     slideFromRight 1.2s ease forwards,
     float 4s ease-in-out infinite;
   animation-delay: 0.2s, 1.2s;
+}
+/* ================= MOBILE RESPONSIVENESS FIX ================= */
+
+/* Tablets & below */
+@media (max-width: 900px) {
+
+  header {
+    padding: 15px 30px;
+  }
+
+  nav ul {
+    gap: 18px;
+  }
+
+  .hero {
+    height: auto;
+    padding: 120px 30px 60px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero p {
+    width: 100%;
+  }
+
+  .hero img {
+    width: 320px;
+    height: auto;
+    margin-top: 40px;
+  }
+
+  .schedule,
+  .features,
+  .price-section,
+  .about,
+  .contact {
+    padding: 60px 30px;
+  }
+
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about img {
+    width: 100%;
+    max-width: 360px;
+    margin: auto;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  header { padding: 12px 20px; }
+  nav ul { display: none; }
+
+  .hero h1 { font-size: 36px; }
+  .hero img { width: 260px; }
+
+  .schedule {
+    padding: 35px 18px;
+  }
+
+  .schedule h2 {
+    font-size: 28px;
+  }
+
+  .schedule-box {
+    padding: 15px;
+  }
+
+  .schedule-box img {
+    height: 180px;
+  }
+
+  .schedule-box h2 {
+    font-size: 18px;
+  }
+
+  .schedule-box h3 {
+    font-size: 14px;
+  }
 }
